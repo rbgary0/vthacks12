@@ -1,4 +1,5 @@
 import './Navbar.css'
+import Form from './Form.jsx'
 
 function Navbar() {
 
@@ -7,7 +8,8 @@ function Navbar() {
         <div className="topnav">
             <button className="buttonOption">Going To</button>
             <button className="buttonOption">Looking For</button>
-            <button className="buttonNew">New</button>
+            {/* <button className="buttonNew">New</button> */}
+            <Form/>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import Popup from 'reactjs-popup';
 import './Form.css'
+import axios from 'axios'
 
 function Form() {
     const handleSubmit = (e) => {
@@ -16,6 +17,12 @@ function Form() {
           content: "banana",
           important: Math.random() < 0.5,
         }
+      
+        axios
+          .post('http://127.0.0.1:8000/', noteObject)
+          .then(response => {
+            console.log(response)
+          })
 
           fetch('http://127.0.0.1:8000/', {
             method: 'POST',

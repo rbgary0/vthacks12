@@ -22,7 +22,7 @@ function Form() {
           <div className="modal">
             <div className="header"> New Listing </div>
             <div className="content">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} method="POST" action="http://127.0.0.1:8000/">
                 <label for="start">Starting Location: </label>
                 <input name="start" type="text"></input> 
                 <br></br>

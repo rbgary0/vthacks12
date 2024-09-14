@@ -14,7 +14,7 @@ function Form() {
 
     return (
         <Popup
-        trigger={<button className="button"> New </button>}
+        trigger={<button className="buttonNew"> New </button>}
         modal
         nested
         >

@@ -25,4 +25,4 @@ class JsonHandler:
     # exports dict as a json in the designated file path
     def export_json(self, file_path):
         with open(file_path, 'w') as file:
-            json.dump(self.data, file, indent=4)
+            json.dump(self.dict, file)

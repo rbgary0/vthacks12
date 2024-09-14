@@ -10,6 +10,18 @@ function Form() {
     
         const formJson = Object.fromEntries(formData.entries());
         console.log(formJson);
+
+
+        const noteObject = {
+          content: "banana",
+          important: Math.random() < 0.5,
+        }
+      
+        axios
+          .post('', noteObject)
+          .then(response => {
+            console.log(response)
+          })
       }
 
     return (

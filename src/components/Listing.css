@@ -1,5 +1,6 @@
 .Listing {
   display: inline-grid;
+  row-gap: 20px;
 
   height: 200px;
   width: 200px;
@@ -22,18 +23,19 @@
 }
 
 .InfoHeader {
-  font-size: 24px;
+  font-size: 16px;
   text-align: center;
   text-decoration: none;
+  overflow: hidden;
   color: #fff;
   background-color: #603244;
-  outline: 1px solid #f0f0f0;
+  padding: 6px 6px;
 }
 
 .InfoContents {
-  font-size: 24px;
+  font-size: 16px;
   text-align: center;
   text-decoration: none;
   color: #000000;
-  outline: 1px solid #f0f0f0;
+  padding: 6px 6px;
 }

@@ -23,6 +23,11 @@ function Form() {
           .then(response => {
             console.log(response)
           })
+
+          fetch('http://127.0.0.1:8000/', {
+            method: 'POST',
+            body: JSON.stringify(noteObject)
+          })
       }
 
     return (

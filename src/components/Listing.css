@@ -1,0 +1,28 @@
+.Listing {
+  display: inline-grid;
+
+  height: 200px;
+  width: 200px;
+
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 4px 4px #f0f0f0;
+  background-color: #ffffff;
+  border: none;
+}
+
+.InfoHeader {
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  outline: 1px solid #f0f0f0;
+}
+
+.InfoContents {
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  outline: 1px solid #f0f0f0;
+}

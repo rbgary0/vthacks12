@@ -10,22 +10,20 @@ function Form() {
     
         const formJson = Object.fromEntries(formData.entries());
         console.log(formJson);
-
+        console.log(JSON.stringify(formJson))
 
         const noteObject = {
           content: "banana",
           important: Math.random() < 0.5,
         }
-      
-        axios
-          .post('', noteObject)
-          .then(response => {
-            console.log(response)
-          })
 
           fetch('http://127.0.0.1:8000/', {
             method: 'POST',
-            body: JSON.stringify(noteObject)
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formJson)
           })
       }
 

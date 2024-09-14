@@ -23,6 +23,6 @@ class JsonHandler:
             print(f"An unexpected error occurred: {e}")
 
     # exports dict as a json in the designated file path
-    def export_json(self, file_path):
+    def export_json(self, file_path, dictList):
         with open(file_path, 'w') as file:
-            json.dump(self.dict, file)
+            json.dump(dictList, file, indent=4)

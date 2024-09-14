@@ -5,8 +5,8 @@ body {
 }
 
 .ListingsGrid {
-    display: flex;
-    grid-template-columns: flex-col;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 10px;
     padding: 10px;
     overflow: hidden;

@@ -12,28 +12,23 @@ function Form() {
         const formJson = Object.fromEntries(formData.entries());
         console.log(formJson);
         console.log(JSON.stringify(formJson))
-
-        const noteObject = {
-          content: "banana",
-          important: Math.random() < 0.5,
-        }
       
         axios
-          .post('http://127.0.0.1:8000/', noteObject)
+          .post('http://127.0.0.1:8000/', formJson)
           .then(response => {
             console.log(response)
           })
 
-          fetch('http://127.0.0.1:8000/', {
-            method: 'POST',
-            mode: 'cors',
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json',
+          // fetch('http://127.0.0.1:8000/', {
+          //   method: 'POST',
+          //   mode: 'cors',
+          //   headers: {
+          //     'Accept': 'application/json',
+          //     'Content-Type': 'application/json',
               
-            },
-            body: JSON.stringify(formJson)
-          })
+          //   },
+          //   body: JSON.stringify(formJson)
+          // })
       }
 
     return (
@@ -53,6 +48,11 @@ function Form() {
                 <label for="end">Destination: </label>
                 <input name="end" type="text"></input>
                 <br></br>
+                <label for="driver">Providing a ride</label>
+                <input name="option" type="radio" value="driver"/>
+                <label for="rider">Looking for a ride</label>
+                <input name="option" type="radio" value="rider"/>
+                <br></br>
                 <label for="date">Date: </label>
                 <input name="date" type="date"></input>
                 <br></br>
@@ -70,6 +70,7 @@ function Form() {
                 <br></br>
                 <label for="notes">Notes: </label>
                 <textarea name="notes" type="text"></textarea>
+                <br></br>
                 <input type="submit"></input>
               </form>
             </div>

@@ -13,18 +13,43 @@ function ListingsGrid() {
     //     setListings([...listings, <Listing />]);
     // }
 
-    let count = 0
 
     const promise = axios.get('http://127.0.0.1:8000/')
     console.log(promise)
-    console.log(count)
-    count += 1
+    promise.then(response => {
+        console.log(response)
+        console.log(response.data)
+    })
 
 
     return (
         <div>
             <div className="ListingsGrid">
                 <Listing start="start" end="end" date="date" time="time" />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
+                <Listing />
                 <Listing />
                 <Listing />
                 <Listing />

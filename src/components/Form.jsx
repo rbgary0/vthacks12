@@ -10,25 +10,12 @@ function Form() {
         const formData = new FormData(form)
     
         const formJson = Object.fromEntries(formData.entries());
-        console.log(formJson);
-        console.log(JSON.stringify(formJson))
       
         axios
           .post('http://127.0.0.1:8000/', formJson)
           .then(response => {
             console.log(response)
           })
-
-          // fetch('http://127.0.0.1:8000/', {
-          //   method: 'POST',
-          //   mode: 'cors',
-          //   headers: {
-          //     'Accept': 'application/json',
-          //     'Content-Type': 'application/json',
-              
-          //   },
-          //   body: JSON.stringify(formJson)
-          // })
       }
 
     return (

@@ -5,6 +5,8 @@ body {
 
 .topnav {
     display: flex;
+    position: sticky;
+    top: 0;
     justify-content: center;
     overflow: hidden;
     background-color: #603244;

@@ -38,10 +38,10 @@
   font-family: 'Monsterrat', sans-serif; /* Ensure the font is applied */
   font-size: 36px;
   text-align: center;
-  background-color: rgba(227, 148, 1, 0.942); /* Orange background color */
+  background-color: rgba(179, 126, 67, 0.942); /* Orange background color */
   color: rgb(255, 255, 255); /* White text color */
   padding: 20px 0; /* Padding inside the header */
-  border: 2px solid rgba(227, 148, 1, 0.942); /* Border color matches the background */
+  border: 2px solid rgba(179, 126, 67, 0.942); /* Border color matches the background */
   border-radius: 8px 8px 0 0; /* Rounded corners at the top */
   margin-bottom: 10px; /* Remove default margin to align with modal */
   box-sizing: border-box; /* Ensure padding and border are included in width */
@@ -135,7 +135,7 @@ input[type="radio"] {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid #007bff;
+  border: 2px solid #603244;
   margin-right: 10px;
   vertical-align: middle;
   background-color: white;
@@ -144,8 +144,8 @@ input[type="radio"] {
 
 /* Checked state styles */
 input[type="radio"]:checked + .radio-label::before {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #603244;
+  border-color: #603244;
 }
 
 .radio-label span {
@@ -154,18 +154,17 @@ input[type="radio"]:checked + .radio-label::before {
 
 /* Button styling */
 button {
-  background-color: #007bff;
+  background-color: #603244;
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #774256;
 }
 
 /* Ensure the modal's container is centered */
@@ -192,5 +191,5 @@ button.submit-button {
 }
 
 button.submit-button:hover {
-  background-color: #685c60; /* Lighter background on hover */
+  background-color: #774256; /* Lighter background on hover */
 }

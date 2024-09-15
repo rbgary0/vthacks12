@@ -20,7 +20,7 @@ function ListingsGrid() {
     }, [])
     console.log('render', data.length, 'notes')
 
-    const cardsToShow = showDriver ? data : data.filter(entry => entry.isDriver === false)
+    const cardsToShow = showDriver ? data : data.filter(entry => entry.isDriver === "false")
 
     return (
         <div>

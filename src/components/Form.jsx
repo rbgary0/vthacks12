@@ -5,7 +5,7 @@ import axios from 'axios'
 function Form() {
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         const form = e.target;
         const formData = new FormData(form)
     
@@ -34,43 +34,62 @@ function Form() {
                 <br></br>
                 <label for="end">Destination: </label>
                 <input name="end" type="text"></input>
-                <br></br>
-                <label for="driver">Providing a ride</label>
-                <input name="isDriver" type="radio" value="true"/>
-                <br></br>
-                <label for="rider">Looking for ride</label>
-                <input name="isDriver" type="radio" value="false"/>
-                <br></br>
+                <br />
+                  <div className="radio-group">
+                    <label>
+                      <input name="isDriver" type="radio" value="true" />
+                      <span className="radio-label">Providing a ride</span>
+                    </label>
+                    <label>
+                      <input name="isDriver" type="radio" value="false" />
+                      <span className="radio-label">Looking for ride</span>
+                    </label>
+                  </div>
+                <br />
                 <label for="date">Date: </label>
                 <input name="date" type="date"></input>
                 <br></br>
                 <label for="time">Time of Departure: </label>
                 <input name="time" type="time"></input>
-                <br></br>
-                <label for="gas">Gas Cost: </label>
-                <input name="gas" type="text"></input>
-                <br></br>
-                <label for="length">Est. Length of Trip: </label>
-                <input name="length" type="text"></input>
-                <br></br>
-                <label for="capacity">Open Seats: </label>
-                <input name="capacity" type="number"></input>
-                <br></br>
+                <br />
+                <div className="flex-row">
+                  <div>
+                    <label htmlFor="gas">Gas Cost: </label>
+                    <input name="gas" type="text" className="money-input" />
+                  </div>
+                  <div>
+                    <label htmlFor="capacity">Open Seats: </label>
+                    <input name="capacity" type="number" className="small-integer" />
+                  </div>
+                </div>
+                <br />
+                <div className="length-container">
+                  <label htmlFor="length">Estimated Length of Trip: </label>
+                  <input name="length" type="text" className="small-integer" />
+                  <select name="lengthUnit" className="length-select">
+                    <option value="seconds">Second/s</option>
+                    <option value="minutes">Minute/s</option>
+                    <option value="hours">Hour/s</option>
+                    <option value="days">Day/s</option>
+                    <option value="weeks">Week/s</option>
+                  </select>
+                </div>
+                <br />
                 <label for="notes">Notes: </label>
                 <textarea name="notes" type="text"></textarea>
-                <br></br>
-                <input type="submit"></input>
+                <br />
               </form>
             </div>
             <div className="actions">
-              <button
-                className="button"
-                onClick={() => {
-                  console.log('modal closed ');
-                  close();
-                }}
-              >
-                Exit
+                  <button type="submit" className="submit-button">Submit</button>
+                  <button
+                    className="button"
+                    onClick={() => {
+                      console.log('modal closed ');
+                      close();
+                    }}
+                  >
+                    Exit
               </button>
             </div>
           </div>

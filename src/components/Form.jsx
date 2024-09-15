@@ -49,9 +49,10 @@ function Form() {
                 <input name="end" type="text"></input>
                 <br></br>
                 <label for="driver">Providing a ride</label>
-                <input name="option" type="radio" value="driver"/>
-                <label for="rider">Looking for a ride</label>
-                <input name="option" type="radio" value="rider"/>
+                <input name="isDriver" type="radio" value="true"/>
+                <br></br>
+                <label for="rider">Looking for ride</label>
+                <input name="isDriver" type="radio" value="false"/>
                 <br></br>
                 <label for="date">Date: </label>
                 <input name="date" type="date"></input>

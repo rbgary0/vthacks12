@@ -16,8 +16,6 @@ function Form() {
           .then(response => {
             console.log(response)
           })
-
-          location.reload();
       }
 
     return (

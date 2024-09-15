@@ -39,6 +39,7 @@ body {
     font-size: 17px;
     border: none;
     cursor: pointer;
+    float: right;
 }
 
 .buttonNew:hover {

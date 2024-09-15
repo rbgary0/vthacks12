@@ -7,9 +7,9 @@ function Navbar() {
         <nav className="topnav">
             <div className="align-left">
                 <img src={placeholder} alt="Logo" className="logo" />
-                <div className="company-name"> Hokie Pool </div>
-                <Form/>
+                <div className="company-name"> HokiePool </div>
             </div>
+            <Form/>
         </nav>
     )
 }

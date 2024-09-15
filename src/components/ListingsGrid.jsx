@@ -8,11 +8,7 @@ import axios from 'axios';
 function ListingsGrid() {
 
     const [data, setData] = useState([])
-    // const [listings, setListings] = useState([]);
-
-    // const addListing = () => {
-    //     setListings([...listings, <Listing />]);
-    // }
+    const [showDriver, setShowDriver] = useState(true)
 
 
     useEffect(() => {
@@ -24,42 +20,21 @@ function ListingsGrid() {
     }, [])
     console.log('render', data.length, 'notes')
 
-    // const testArr = [
-    //     {
-    //         start: "idk",
-    //         end: "also idk",
-    //         date: "1/2/3",
-    //         time: "1:00"
-    //     },
-    //     {
-    //         start: "idk",
-    //         end: "also idk",
-    //         date: "1/2/3",
-    //         time: "1:00"
-    //     },
-    //     {
-    //         start: "idk",
-    //         end: "also idk",
-    //         date: "1/2/3",
-    //         time: "1:00"
-    //     },
-    //     {
-    //         start: "idk",
-    //         end: "also idk",
-    //         date: "1/2/3",
-    //         time: "1:00"
-    //     }
-    // ]
-
+    const cardsToShow = showDriver ? data.filter(entry => entry.isDriver === "true") : data.filter(entry => entry.isDriver === "false")
 
     return (
         <div>
             <div className="ListingsGrid">
-                {data.map((entry, index) => (
+                <div>
+                    <button onClick={() => setShowDriver(!showDriver)}>
+                        show {showDriver ? 'Driving' : 'Looking for a ride'}
+                    </button>
+                </div>
+                {cardsToShow.map((entry, index) => (
                     <div id={index}>
-                        <Listing start={entry.start} end={entry.end} isDriver={entry.isDriver} 
-                        date={entry.date} time={entry.time} gas={entry.gas} 
-                        length={entry.length} capacity={entry.capacity} notes={entry.notes} />
+                        <Listing start={entry.start} end={entry.end} isDriver={entry.isDriver}
+                            date={entry.date} time={entry.time} gas={entry.gas}
+                            length={entry.length} capacity={entry.capacity} notes={entry.notes} />
                     </div>
 
                 ))}

@@ -46,10 +46,6 @@ function Listing({ start, end, isDriver, date, time, gas, length, capacity, note
                             <div className="popContents">{end}</div>
                         </div>
                         <div className="popInfo">
-                            <div className="popHeader">isDriver:</div>
-                            <div className="popContents">{isDriver}</div>
-                        </div>
-                        <div className="popInfo">
                             <div className="popHeader">Date:</div>
                             <div className="popContents">{date}</div>
                         </div>

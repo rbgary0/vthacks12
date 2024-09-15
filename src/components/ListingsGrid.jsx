@@ -1,12 +1,13 @@
 import './ListingsGrid.css'
 import Listing from './Listing.jsx'
 // import Button from './Button.jsx'
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
 
 function ListingsGrid() {
 
+    const [data, setData] = useState([])
     // const [listings, setListings] = useState([]);
 
     // const addListing = () => {
@@ -14,14 +15,14 @@ function ListingsGrid() {
     // }
 
 
-    const promise = axios.get('http://127.0.0.1:8000/')
-    console.log(promise)
-    let data = []
-    promise.then(response => {
-        console.log(response)
-        console.log(response.data)
-        data = response.data
-    })
+    useEffect(() => {
+        console.log('effect');
+        axios.get('http://127.0.0.1:8000/').then(response => {
+            console.log('fufillied')
+            setData(response.data)
+        })
+    }, [])
+    console.log('render', data.length, 'notes')
 
     // const testArr = [
     //     {
@@ -56,7 +57,9 @@ function ListingsGrid() {
             <div className="ListingsGrid">
                 {data.map((entry, index) => (
                     <div id={index}>
-                        <Listing start={entry.start} end={entry.end} date={entry.date} time={entry.time}/>
+                        <Listing start={entry.start} end={entry.end} isDriver={entry.isDriver} 
+                        date={entry.date} time={entry.time} gas={entry.gas} 
+                        length={entry.length} capacity={entry.capacity} notes={entry.notes} />
                     </div>
 
                 ))}

@@ -17,7 +17,7 @@ function Form() {
         console.log(response)
       })
 
-      setTimeout(function () { window.location.reload(); }, 10)
+      setTimeout(function () { window.location.reload(); }, 500)
   }
 
   return (

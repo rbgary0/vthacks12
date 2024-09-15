@@ -7,15 +7,33 @@ body {
     display: flex;
     position: sticky;
     top: 0;
-    justify-content: center;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center items vertically */
     overflow: hidden;
     background-color: #603244;
     box-shadow: 0 6px 6px #f0f0f0;
+    padding: 0 20px; /* Add some padding to the left and right */
+    position: relative; /* Make sure position is relative for absolute positioning of logo */
+}
+
+.align-left {
+    position: absolute; /* Position the logo absolutely within the topnav */
+    left: 20px; /* Align logo to the left with padding */
+}
+
+#wrapper {
+    display: flex; /* Use flexbox to center the buttons */
+    gap: 10px; /* Add space between buttons */
+    justify-content: center; /* Center buttons horizontally */
+    flex-grow: 1; /* Make sure wrapper takes up available space */
+}
+
+.logo {
+    height: 50px; /* Adjust height as needed */
 }
 
 .buttonOption,
 .buttonNew {
-    float: left;
     color: #f2f2f2;
     background-color: #603244;
     text-align: center;
@@ -36,13 +54,11 @@ body {
 
 .buttonOption.active,
 .buttonNew.active {
-    float: right;
     background-color: #04AA6D;
     color: white;
 }
 
 .buttonNew {
-    float: right;
     background-color: #b37e43;
     color: white;
 }

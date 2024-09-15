@@ -16,6 +16,8 @@ function Form() {
       .then(response => {
         console.log(response)
       })
+
+      setTimeout(function () { window.location.reload(); }, 10)
   }
 
   return (

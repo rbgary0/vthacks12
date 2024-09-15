@@ -5,9 +5,12 @@ body {
 
 .topnav {
     display: flex;
+    position: sticky;
+    top: 0;
     justify-content: center;
     overflow: hidden;
     background-color: #603244;
+    box-shadow: 0 6px 6px #f0f0f0;
 }
 
 .buttonOption,
@@ -23,10 +26,12 @@ body {
     cursor: pointer;
 }
 
-.buttonOption:hover,
 .buttonNew:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #c79153;
+}
+
+.buttonOption:hover {
+    background-color: #774256;
 }
 
 .buttonOption.active,

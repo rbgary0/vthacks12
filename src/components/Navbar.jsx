@@ -7,12 +7,9 @@ function Navbar() {
         <nav className="topnav">
             <div className="align-left">
                 <img src={placeholder} alt="Logo" className="logo" />
+                <div className="company-name"> Hokie Pool </div>
             </div>
-            <div id="wrapper">
-                <button className="buttonOption">Going To</button>
-                <button className="buttonOption">Looking For</button>
-                <Form/>
-            </div>
+            <button className="buttonNew">New</button>
         </nav>
     )
 }

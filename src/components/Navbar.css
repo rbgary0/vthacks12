@@ -7,35 +7,33 @@ body {
     display: flex;
     position: sticky;
     top: 0;
-    justify-content: center; /* Center the content horizontally */
+    justify-content: space-between; /* Distribute space between logo and "New" button */
     align-items: center; /* Center items vertically */
     overflow: hidden;
     background-color: #603244;
     box-shadow: 0 6px 6px #f0f0f0;
     padding: 0 20px; /* Add some padding to the left and right */
-    position: relative; /* Make sure position is relative for absolute positioning of logo */
+    position: relative; /* Ensure proper positioning */
 }
 
 .align-left {
-    position: absolute; /* Position the logo absolutely within the topnav */
-    left: 20px; /* Align logo to the left with padding */
-}
-
-#wrapper {
-    display: flex; /* Use flexbox to center the buttons */
-    gap: 10px; /* Add space between buttons */
-    justify-content: center; /* Center buttons horizontally */
-    flex-grow: 1; /* Make sure wrapper takes up available space */
+    display: flex; /* Align logo and company name */
+    align-items: center;
 }
 
 .logo {
     height: 50px; /* Adjust height as needed */
+    margin-right: 10px; /* Add space between logo and company name */
 }
 
-.buttonOption,
+.company-name {
+    color: #f2f2f2; /* Text color for the company name */
+    font-size: 24px; /* Adjust font size as needed */
+}
+
 .buttonNew {
     color: #f2f2f2;
-    background-color: #603244;
+    background-color: #b37e43;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -48,17 +46,7 @@ body {
     background-color: #c79153;
 }
 
-.buttonOption:hover {
-    background-color: #774256;
-}
-
-.buttonOption.active,
 .buttonNew.active {
     background-color: #04AA6D;
-    color: white;
-}
-
-.buttonNew {
-    background-color: #b37e43;
     color: white;
 }

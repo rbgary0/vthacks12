@@ -25,7 +25,7 @@ function ListingsGrid() {
     return (
         <div>
             <div className="ListingsGrid">
-                <Listing start="start" end="end" date="date" time="time" />
+                <Listing arr={response.data[0]} />
                 <Listing />
                 <Listing />
                 <Listing />

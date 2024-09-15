@@ -177,6 +177,10 @@ button:hover {
   margin-top: 15px; /* Reduced margin-top for spacing */
 }
 
+.buttonNew {
+  float: right;
+}
+
 /* Button styling */
 button.exit-button {
   background-color: #603244;

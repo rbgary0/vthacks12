@@ -27,7 +27,7 @@ function ListingsGrid() {
             <div className="ListingsGrid">
                 <div>
                     <button onClick={() => setShowDriver(!showDriver)}>
-                        show {showDriver ? 'Driving' : 'Looking for a ride'}
+                        Show {showDriver ? 'Driving' : 'Looking for a ride'}
                     </button>
                 </div>
                 {cardsToShow.map((entry, index) => (

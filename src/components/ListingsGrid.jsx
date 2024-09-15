@@ -14,55 +14,52 @@ function ListingsGrid() {
     // }
 
 
-    // const promise = axios.get('http://127.0.0.1:8000/')
-    // console.log(promise)
-    // promise.then(response => {
-    //     console.log(response)
-    //     console.log(response.data)
-    // })
+    const promise = axios.get('http://127.0.0.1:8000/')
+    console.log(promise)
+    let data = []
+    promise.then(response => {
+        console.log(response)
+        console.log(response.data)
+        data = response.data
+    })
 
-    const testArr = [
-        {
-            start: "idk",
-            end: "also idk",
-            date: "1/2/3",
-            time: "1:00"
-        }
-    ]
+    // const testArr = [
+    //     {
+    //         start: "idk",
+    //         end: "also idk",
+    //         date: "1/2/3",
+    //         time: "1:00"
+    //     },
+    //     {
+    //         start: "idk",
+    //         end: "also idk",
+    //         date: "1/2/3",
+    //         time: "1:00"
+    //     },
+    //     {
+    //         start: "idk",
+    //         end: "also idk",
+    //         date: "1/2/3",
+    //         time: "1:00"
+    //     },
+    //     {
+    //         start: "idk",
+    //         end: "also idk",
+    //         date: "1/2/3",
+    //         time: "1:00"
+    //     }
+    // ]
 
 
     return (
         <div>
             <div className="ListingsGrid">
-                <Listing start={testArr[0].start} end={testArr[0].end} date={testArr[0].date} time={testArr[0].time}/>
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
-                <Listing />
+                {data.map((entry, index) => (
+                    <div id={index}>
+                        <Listing start={entry.start} end={entry.end} date={entry.date} time={entry.time}/>
+                    </div>
+
+                ))}
             </div>
         </div>
     )

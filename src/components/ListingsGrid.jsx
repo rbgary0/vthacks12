@@ -14,18 +14,27 @@ function ListingsGrid() {
     // }
 
 
-    const promise = axios.get('http://127.0.0.1:8000/')
-    console.log(promise)
-    promise.then(response => {
-        console.log(response)
-        console.log(response.data)
-    })
+    // const promise = axios.get('http://127.0.0.1:8000/')
+    // console.log(promise)
+    // promise.then(response => {
+    //     console.log(response)
+    //     console.log(response.data)
+    // })
+
+    const testArr = [
+        {
+            start: "idk",
+            end: "also idk",
+            date: "1/2/3",
+            time: "1:00"
+        }
+    ]
 
 
     return (
         <div>
             <div className="ListingsGrid">
-                <Listing arr={response.data[0]} />
+                <Listing start={testArr[0].start} end={testArr[0].end} date={testArr[0].date} time={testArr[0].time}/>
                 <Listing />
                 <Listing />
                 <Listing />

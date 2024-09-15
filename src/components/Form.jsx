@@ -4,6 +4,8 @@ import axios from 'axios'
 
 function Form() {
     const handleSubmit = (e) => {
+        e.preventDefault();
+        location.reload();
         
         const form = e.target;
         const formData = new FormData(form)

@@ -57,7 +57,9 @@ function ListingsGrid() {
             <div className="ListingsGrid">
                 {data.map((entry, index) => (
                     <div id={index}>
-                        <Listing start={entry.start} end={entry.end} date={entry.date} time={entry.time}/>
+                        <Listing start={entry.start} end={entry.end} isDriver={entry.isDriver} 
+                        date={entry.date} time={entry.time} gas={entry.gas} 
+                        length={entry.length} capacity={entry.capacity} notes={entry.notes} />
                     </div>
 
                 ))}

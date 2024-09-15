@@ -2,7 +2,7 @@ import './Listing.css'
 import Popup from 'reactjs-popup';
 
 
-function Listing({ start, end, date, time }) {
+function Listing({ start, end, isDriver, date, time, gas, length, capacity, notes }) {
     // let start = infoList.start;
     // let end = infoList.end;
     // let date = infoList.date;
@@ -39,39 +39,39 @@ function Listing({ start, end, date, time }) {
                     <div className="content">
                         <div className="popInfo">
                             <div className="popHeader">From:</div>
-                            <div className="popContents">Your moms house</div>
+                            <div className="popContents">{start}</div>
                         </div>
                         <div className="popInfo">
                             <div className="popHeader">To:</div>
-                            <div className="popContents">Your moms house</div>
+                            <div className="popContents">{end}</div>
                         </div>
                         <div className="popInfo">
                             <div className="popHeader">isDriver:</div>
-                            <div className="popContents">Your moms house</div>
+                            <div className="popContents">{isDriver}</div>
                         </div>
                         <div className="popInfo">
                             <div className="popHeader">Date:</div>
-                            <div className="popContents">Your moms house</div>
+                            <div className="popContents">{date}</div>
                         </div>
                         <div className="popInfo">
                             <div className="popHeader">Time:</div>
-                            <div className="popContents">Your moms house</div>
+                            <div className="popContents">{time}</div>
                         </div>
                         <div className="popInfo">
                             <div className="popHeader">Gas:</div>
-                            <div className="popContents">Your moms house</div>
+                            <div className="popContents">{gas}</div>
                         </div>
                         <div className="popInfo">
                             <div className="popHeader">Est Length of Trip:</div>
-                            <div className="popContents">Your moms house</div>
+                            <div className="popContents">{length}</div>
                         </div>
                         <div className="popInfo">
                             <div className="popHeader">Open Seats:</div>
-                            <div className="popContents">Your moms house</div>
+                            <div className="popContents">{capacity}</div>
                         </div>
                         <div className="popInfo">
                             <div className="popHeader">Notes:</div>
-                            <div className="popContents">Your moms house</div>
+                            <div className="popContents">{notes}</div>
                         </div>
                     </div>
                     <div className="actions">

@@ -24,26 +24,28 @@
 .modal {
   font-size: 14px; /* Adjust font size for better readability */
   border-radius: 8px; /* Rounded corners for the modal */
-  width: 450px;
+  width: 500px;
   max-width: 100%;
   height: auto;
   background-color: #fff; /* White background for the form */
   padding: 20px; /* Padding inside the modal */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
 }
 
 /* Header styling for modal */
 .header {
   width: 100%;
   font-family: 'Monsterrat', sans-serif; /* Ensure the font is applied */
-  font-size: 36px;
+  font-size: 34px;
   text-align: center;
   background-color: rgba(179, 126, 67, 0.942); /* Orange background color */
   color: rgb(255, 255, 255); /* White text color */
-  padding: 20px 0; /* Padding inside the header */
+  padding: 10px 0; /* Padding inside the header */
   border: 2px solid rgba(179, 126, 67, 0.942); /* Border color matches the background */
   border-radius: 8px 8px 0 0; /* Rounded corners at the top */
-  margin-bottom: 10px; /* Remove default margin to align with modal */
+  margin-bottom: 8px; /* Remove default margin to align with modal */
   box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
@@ -173,6 +175,18 @@ button:hover {
   justify-content: space-between; /* Align items to the edges */
   gap: 10px; /* Add gap between buttons */
   margin-top: 15px; /* Reduced margin-top for spacing */
+}
+
+/* Button styling */
+button.exit-button {
+  background-color: #603244;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
 /* Button styling */

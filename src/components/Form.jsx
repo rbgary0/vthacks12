@@ -81,7 +81,7 @@ function Form() {
               <div className="actions">
                 <button type="submit" className="submit-button">Submit</button>
                 <button
-                  className="button"
+                  className="exit-button"
                   onClick={() => {
                     console.log('modal closed ');
                     close();

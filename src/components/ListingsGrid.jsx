@@ -16,7 +16,7 @@ function ListingsGrid() {
 
     const promise = axios.get('http://127.0.0.1:8000/')
     console.log(promise)
-    let data = []
+    let data
     promise.then(response => {
         console.log(response)
         console.log(response.data)

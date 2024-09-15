@@ -24,12 +24,13 @@ function ListingsGrid() {
 
     return (
         <div>
+            <div>
+                <button className="togglebutton" onClick={() => setShowDriver(!showDriver)}>
+                    show {showDriver ? 'Driving' : 'Looking for a ride'}
+                </button>
+            </div>
             <div className="ListingsGrid">
-                <div>
-                    <button onClick={() => setShowDriver(!showDriver)}>
-                        show {showDriver ? 'Driving' : 'Looking for a ride'}
-                    </button>
-                </div>
+                
                 {cardsToShow.map((entry, index) => (
                     <div id={index}>
                         <Listing start={entry.start} end={entry.end} isDriver={entry.isDriver}

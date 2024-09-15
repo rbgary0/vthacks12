@@ -36,6 +36,7 @@
   text-decoration: none;
   color: #fff;
   background-color: #603244;
+  border-radius: 8px 0 0 8px;
 }
 
 .InfoContents {
@@ -45,24 +46,13 @@
   text-decoration: none;
   color: #000000;
   overflow: hidden;
+  border-radius: 0 8px 8px 0;
 }
 
 
 
-/* 
-.modal {
-  display: inline-grid;
 
-  height: auto;
-  width: auto;
 
-  display: inline-block;
-  box-shadow: 0 0 8px #f0f0f0;
-  background-color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  overflow: hidden;
-}
 
 .header {
   font-size: 18px;
@@ -96,6 +86,7 @@
   text-decoration: none;
   color: #fff;
   background-color: #603244;
+  border-radius: 8px 0 0 8px;
 }
 
 .popContents {
@@ -105,4 +96,5 @@
   text-decoration: none;
   color: #000000;
   overflow: hidden;
-} */
+  border-radius: 0 8px 8px 0;
+}

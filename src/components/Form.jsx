@@ -75,8 +75,8 @@ function Form() {
                   </select>
                 </div>
                 <br />
-                <label for="notes">Notes: </label>
-                <textarea name="notes" type="text"></textarea>
+                <label htmlFor="notes">Notes: </label>
+                <textarea name="notes" type="text" className="large-text"></textarea>
                 <br />
               </form>
             </div>

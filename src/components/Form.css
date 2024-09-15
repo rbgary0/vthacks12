@@ -74,10 +74,10 @@ textarea {
 }
 
 /* Huge Text box for Notes */
-input.large-text {
-  width: 100px; /* Smaller width */
-  padding: 10px;
-  text-align: center; /* Center text */
+textarea {
+  min-height: 10px; /* Minimum height to accommodate text */
+  resize: vertical; /* Allow vertical resizing */
+  overflow: auto; /* Ensure scrollbar appears if content overflows */
 }
 
 /* Large Flex container containing dropdowns for Est. Length of Trip input*/
